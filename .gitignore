@@ -2,3 +2,8 @@ dist/
 .DS_Store
 __pycache__/
 .sites-local/
+_site/
+.bundle/
+.jekyll-cache/
+.sass-cache/
+vendor/bundle/

@@ -1,49 +1,44 @@
-# Yi Xiong — Academic Website
+# Yi Xiong — Academic Pages
 
-A customized version of [Minimal Light](https://github.com/yaoyao-liu/minimal-light), using its static HTML edition and stylesheet. Content comes from Yi Xiong's supplied CV. The homepage and printable CV share a single content source.
+Live website: **https://15207219130.github.io/xiongy/**
 
-Website: https://15207219130.github.io/xiongy/
+This site uses the original [Academic Pages](https://github.com/academicpages/academicpages.github.io) Jekyll template through `jekyll-remote-theme`, pinned to revision `9c8f68fd2582abba41365ea1ca459bbb222d5a92`. It retains the template's standard layout, sidebar, navigation, typography, and responsive styling. There is no custom HTML generator or custom stylesheet.
 
-GitHub repository: https://github.com/15207219130/xiongy
+## Edit the content
 
-## Build and preview
+| Content | File |
+| --- | --- |
+| Name, affiliation, email, links | `_config.yml` |
+| Biography and research interests | `_pages/about.md` |
+| Publications | `_pages/publications.md` |
+| Working papers | `_pages/working-papers.md` |
+| Talks | `_pages/talks.md` |
+| Teaching | `_pages/teaching.md` |
+| Full CV | `_pages/cv.md` |
+| Navigation | `_data/navigation.yml` |
 
-Requires Python 3.9 or later; no packages to install.
+`_data/profile.json` preserves the supplied CV as a structured reference; edit the Markdown pages to update displayed content. `images/profile.png` is the template's neutral placeholder; replace it with your portrait when ready. Two stock includes have small URL fixes so the favicon and sitemap work under `/xiongy/`.
+
+## Preview locally
+
+Install Ruby 3.3 and Bundler, then run:
 
 ```sh
-python3 scripts/build.py
-python3 -m http.server 8000 --directory dist
+bundle install
+bundle exec jekyll serve
 ```
 
-Open http://localhost:8000. The CV page has a **Print / save as PDF** button. Choose Save as PDF in the browser print dialog. A compiled LaTeX CV is not included because the supplied source depends on a missing `resume.cls`.
+Open `http://localhost:4000/xiongy/`.
 
-## Edit content
+## Deployment
 
-- `data/profile.json`: profile, publications, working papers, education, teaching, talks, experience, awards, collaborators.
-- `scripts/build.py`: biography and research-interest prose; HTML rendering.
-- `templates/page.html`: shared page layout and metadata.
-- `assets/css/site.css`: custom typography, layout, colors, mobile and print styles.
-- `assets/css/minimal-light.css`: retained upstream template stylesheet, with its Google Fonts imports removed to avoid external font dependencies.
+GitHub Actions builds Jekyll, checks rendered page links, and deploys `main` to GitHub Pages. Repository Settings → Pages must use **GitHub Actions** as its source.
 
-Run the build after editing. Generated files are in `dist/`; do not edit them directly. The website uses university email and omits telephone numbers. A typographic YX mark is used until a portrait is supplied. No unverified social-profile links or paper author lists are shown.
+The additional `_config_sites.yml` builds the existing private Sites preview at its domain root:
 
-## Publish with GitHub Pages
+```sh
+bundle exec jekyll build --config _config.yml,_config_sites.yml
+python3 scripts/check_site.py dist https://yi-xiong-academic.stonypeach257.chatgpt.site ''
+```
 
-1. Use the `15207219130/xiongy` GitHub repository.
-2. Push this project to its `main` branch.
-3. In **Settings → Pages → Build and deployment**, select **GitHub Actions**.
-4. Run **Deploy academic website to GitHub Pages**, or push a change to `main`.
-
-The workflow builds and deploys `dist/`. Relative asset links also work when hosted under a repository subpath. Only the built output is published; source and design notes are not included in the website. `.openai/hosting.json` identifies the separate owner-private Sites preview and is not needed by GitHub Pages.
-
-## Template provenance
-
-- Upstream: https://github.com/yaoyao-liu/minimal-light
-- Revision: `1ea07f39518ac44644406380c83da6f89037c4fc`
-- License: CC0 1.0, retained in `vendor/minimal-light/LICENSE`.
-- Original HTML reference: `vendor/minimal-light/original-index.html` (not published).
-- Adaptations: personal content; semantic main/section structure; purple accents; responsive navigation; typographic profile mark; printable CV; dependency-free build. Upstream demo content, analytics, CNAME, sample CV, and third-party icon dependencies are not used.
-
-## Publication links
-
-Verified publisher destinations are recorded in `data/profile.json`. Bibliographic details and working-paper statuses follow the supplied CV. Update these when papers change status. Author lists were absent from the CV and have not been inferred.
+Theme attribution and the upstream MIT license are retained.

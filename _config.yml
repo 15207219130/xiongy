@@ -1,0 +1,95 @@
+# Use the original Academic Pages theme, pinned to a reproducible revision.
+remote_theme: academicpages/academicpages.github.io@9c8f68fd2582abba41365ea1ca459bbb222d5a92
+locale: en-US
+site_theme: default
+title: Yi Xiong
+title_separator: "-"
+name: Yi Xiong
+description: "Yi Xiong, PhD student in Computational Science and Engineering at McMaster University. Optimization under uncertainty and machine learning."
+url: https://15207219130.github.io
+baseurl: /xiongy
+repository: 15207219130/xiongy
+author:
+  avatar: profile.png
+  name: Yi Xiong
+  bio: "PhD Student in Computational Science and Engineering"
+  location: Hamilton, Ontario, Canada
+  employer: McMaster University
+  email: xiongy60@mcmaster.ca
+  github: "15207219130"
+  googlescholar:
+  orcid:
+  pubmed:
+  bluesky:
+breadcrumbs: false
+words_per_minute: 160
+future: true
+read_more: disabled
+talkmap_link: false
+comments:
+  provider: false
+atom_feed:
+  hide: true
+analytics:
+  provider: false
+include: [_pages]
+exclude:
+  - .bundle
+  - .github
+  - .openai
+  - .jekyll-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - docs
+  - scripts
+  - vendor
+  - node_modules
+  - dist
+  - tmp
+keep_files: [.git]
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+incremental: false
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+collections:
+  publications: {output: true}
+  teaching: {output: true}
+  talks: {output: true}
+defaults:
+  - scope: {path: "", type: pages}
+    values:
+      layout: single
+      author_profile: true
+      comments: false
+      share: false
+      read_time: false
+sass: {sass_dir: _sass, style: compressed}
+permalink: /:categories/:title/
+timezone: America/Toronto
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+category_archive: {type: liquid, path: /categories/}
+tag_archive: {type: liquid, path: /tags/}
+compress_html:
+  clippings: all
+  ignore: {envs: development}

@@ -1,32 +1,55 @@
-name: Deploy academic website to GitHub Pages
+name: Build and deploy Academic Pages
 on:
   push:
-    branches: [main]
+    branches: [main, academic-pages-template]
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v5
+      - uses: ruby/setup-ruby@v1
         with:
-          python-version: '3.12'
-      - name: Build site
-        run: python scripts/build.py
-      - uses: actions/configure-pages@v5
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Build Academic Pages
+        run: bundle exec jekyll build --strict_front_matter
+        env:
+          JEKYLL_ENV: production
+      - name: Check public pages and links
+        run: python3 scripts/check_site.py _site https://15207219130.github.io /xiongy
       - uses: actions/upload-pages-artifact@v4
         with:
+          path: _site
+      - name: Build private preview
+        run: bundle exec jekyll build --config _config.yml,_config_sites.yml --strict_front_matter
+        env:
+          JEKYLL_ENV: production
+      - name: Check private preview pages and links
+        run: python3 scripts/check_site.py dist https://yi-xiong-academic.stonypeach257.chatgpt.site ''
+      - uses: actions/upload-artifact@v4
+        with:
+          name: private-preview
           path: dist
-      - name: Deploy
+          include-hidden-files: true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ruby-lockfile
+          path: Gemfile.lock
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
         id: deployment
-        uses: actions/deploy-pages@v4

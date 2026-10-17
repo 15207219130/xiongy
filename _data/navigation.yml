@@ -1,0 +1,11 @@
+main:
+  - title: Publications
+    url: /publications/
+  - title: Working papers
+    url: /working-papers/
+  - title: Talks
+    url: /talks/
+  - title: Teaching
+    url: /teaching/
+  - title: CV
+    url: /cv/
