@@ -19,4 +19,11 @@
 <link rel="icon" href="{{ base_path }}/images/favicon.ico"/>
 <meta name="theme-color" content="var(--global-bg-color)"/>
 
+<!-- Keep the stock footer below long desktop pages instead of covering text. -->
+<style>
+@media screen and (min-width: 769px) {
+  .page__footer { position: absolute; }
+}
+</style>
+
 <!-- end custom head snippets -->

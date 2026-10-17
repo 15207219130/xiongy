@@ -17,7 +17,7 @@ This site uses the original [Academic Pages](https://github.com/academicpages/ac
 | Full CV | `_pages/cv.md` |
 | Navigation | `_data/navigation.yml` |
 
-`_data/profile.json` preserves the supplied CV as a structured reference; edit the Markdown pages to update displayed content. `images/profile.png` is the template's neutral placeholder; replace it with your portrait when ready. Two stock includes have small URL fixes so the favicon and sitemap work under `/xiongy/`.
+`_data/profile.json` preserves the supplied CV as a structured reference; edit the Markdown pages to update displayed content. `images/profile.png` is the template's neutral placeholder; replace it with your portrait when ready. Two stock includes have small URL fixes so the favicon and sitemap work under `/xiongy/`. A small footer-position fix prevents the upstream fixed desktop footer from covering page text.
 
 ## Preview locally
 
