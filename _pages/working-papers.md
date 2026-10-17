@@ -19,7 +19,7 @@ Under revision at *INFORMS Journal on Computing*.
 
 ## Layout and Cable Routing Optimization for Onshore Wind Farm Designs under Uncertainty
 
-Submitted at *Manufacturing & Service Operations Management*.
+Submitted to *Manufacturing & Service Operations Management*.
 
 ## VIForge: Solver-Guided Generation of Valid Inequalities with Large Language Models
 
