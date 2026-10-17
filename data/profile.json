@@ -1,0 +1,65 @@
+{
+  "name": "Yi Xiong",
+  "role": "PhD Student",
+  "program": "Computational Science and Engineering",
+  "university": "McMaster University",
+  "location": "Hamilton, Ontario, Canada",
+  "email": "xiongy60@mcmaster.ca",
+  "advisor": "Dr. Elkafi Hassini",
+  "updated": "October 2026",
+  "publications": [
+    {"title": "Data-driven reliable shelter location during hurricane evacuation", "journal": "IISE Transactions", "year": "2026", "detail": "58(3), 358–376", "url": "https://doi.org/10.1080/24725854.2025.2505479"},
+    {"title": "Designing a cross-regional emergency response network considering spatiotemporal evolution: A smart predict-then-optimise method", "journal": "Transportation Research Part E", "year": "2026", "detail": "206, 104547", "url": "https://www.sciencedirect.com/science/article/pii/S1366554525005757"},
+    {"title": "Examining Emerging Risks of Vehicle Electrification in Emergency Medical Transport", "journal": "Risk Analysis", "year": "2025", "detail": "45(12), 4947–4962", "url": "https://doi.org/10.1111/risa.70148"}
+  ],
+  "working_papers": [
+    {"title": "Cold-Start Peak Demand Forecasting and Robust Rider Prepositioning in On-Demand Food Delivery", "status": "Under revision", "journal": "IISE Transactions"},
+    {"title": "User Trade-Offs in Last-Mile Delivery: Evidence From a Canadian National Survey", "status": "Under revision", "journal": "Transportation Research Part A"},
+    {"title": "The Reliable Optical Network Design Problem: A Distributionally Robust Optimization Approach", "status": "Under revision", "journal": "INFORMS Journal on Computing"},
+    {"title": "Layout and Cable Routing Optimization for Onshore Wind Farm Designs under Uncertainty", "status": "Submitted", "journal": "Manufacturing & Service Operations Management"},
+    {"title": "VIForge: Solver-Guided Generation of Valid Inequalities with Large Language Models", "status": "In preparation", "journal": ""}
+  ],
+  "education": [
+    {"institution": "McMaster University", "degree": "PhD Student, Computational Science and Engineering", "dates": "Sep 2025–Present", "location": "Hamilton, Canada", "note": "Supervisor: Dr. Elkafi Hassini"},
+    {"institution": "Zhongnan University of Economics and Law", "degree": "Master of Science, Management Science and Engineering", "dates": "Sep 2022–Jun 2025", "location": "Wuhan, China", "note": "GPA: 92.17/100"},
+    {"institution": "Zhongnan University of Economics and Law", "degree": "Bachelor of Engineering, Safety Engineering", "dates": "Sep 2018–Jun 2022", "location": "Wuhan, China", "note": "GPA: 88.17/100"}
+  ],
+  "teaching": [
+    {"course": "Math 1ZC3 · Engineering Mathematics I", "level": "Undergraduate", "term": "Fall 2026"},
+    {"course": "O610 · Business Analytics", "level": "MBA", "term": "Fall 2026"},
+    {"course": "2OC3 · Operations Management", "level": "Undergraduate", "term": "Winter 2026"},
+    {"course": "Math Help Centre", "level": "", "term": "Winter 2026"},
+    {"course": "Math 1ZC3 · Engineering Mathematics I", "level": "Undergraduate", "term": "Fall 2025"},
+    {"course": "Math Help Centre", "level": "", "term": "Fall 2025"}
+  ],
+  "talks": [
+    {"title": "Cold-Start Peak Demand Forecasting and Robust Rider Prepositioning in On-Demand Food Delivery", "event": "Smart Freight Centre Seminar", "location": "Hamilton, Ontario", "date": "Sep 16, 2026"},
+    {"title": "The Reliable Optical Network Design Problem: A Distributionally Robust Optimization Approach", "event": "2026 POMS China", "location": "Xi’an, China", "date": "Jul 17–21, 2026"},
+    {"title": "User Trade-Offs in Last-Mile Delivery: Evidence From a Canadian National Survey", "event": "DSI Annual Conference 2025", "location": "Orlando, FL", "date": "Nov 22–24, 2025"},
+    {"title": "Leveraging Public Transit for Last-Mile Food Aid: An Integrated Platform Proposal", "event": "DSI Annual Conference 2025", "location": "Orlando, FL", "date": "Nov 22–24, 2025"},
+    {"title": "Examining Emerging Risks of Vehicle Electrification in Emergency Medical Transport", "event": "ITE Joint Mini Transportation Conference 2025", "location": "Burlington, Ontario", "date": "Oct 1, 2025"}
+  ],
+  "experience": [
+    {"organization": "WePick", "role": "Project member", "dates": "Sep 2025–Present", "location": "Hamilton, Canada", "items": ["Mobile application requirement analysis and product feature planning.", "Collaborated with a startup team on user flows, MVP features, and UI/UX layout.", "Conducted market research and competitive benchmarking to guide product direction."]},
+    {"organization": "Cardinal Operations", "role": "Operations Research and Optimization Algorithm Engineer Intern", "dates": "Jun–Nov 2024", "location": "Shanghai, China", "items": ["Worked with the end-to-end Starbucks (China) supply chain business process.", "Cleaned sales, inventory, and transportation datasets for thousands of SKUs.", "Optimized demand forecasting and replenishment algorithms."]}
+  ],
+  "awards": [
+    {"name": "CORS OR Challenge · Finalist", "date": "Jun 2026"},
+    {"name": "Transport Canada Scholarship", "date": "Jun 2026"},
+    {"name": "McMaster Research Scholarship", "date": "Sep 2025"},
+    {"name": "McMaster Department Scholarship", "date": "Sep 2025"},
+    {"name": "Third-Class Graduate Academic Scholarship", "date": "Sep 2024"},
+    {"name": "Second-Class Graduate Academic Scholarship", "date": "Sep 2023"},
+    {"name": "First-Class Graduate Academic Scholarship", "date": "Sep 2022"},
+    {"name": "First-Class Undergraduate Scholarship", "date": "Sep 2021"},
+    {"name": "National Endeavor Scholarship", "date": "Sep 2020"}
+  ],
+  "collaborators": [
+    "Wei Wang · School of Business, Sichuan University",
+    "Mingjie Li · School of Information Engineering, Zhongnan University of Economics and Law",
+    "Rui Zhang · Leeds School of Business, University of Colorado Boulder",
+    "Xin Liang · School of International and Public Affairs, Shanghai Jiao Tong University",
+    "Jiliu Li · School of Management, Northwest Polytechnic University",
+    "Si Liu · Ambassador Crawford College of Business and Entrepreneurship, Kent State University"
+  ]
+}
